@@ -3,12 +3,19 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { VehicleComponent } from './components/vehicle.component';
+import { VehicleComponent } from './components/vehicle/vehicle.component';
+
+import { VehicleService } from './components/vehicle/vehicle.service';
+import { AppService } from './app.service';
 
 @NgModule({
   imports: [
       BrowserModule,
       FormsModule
+  ],
+  providers: [
+      AppService,
+      VehicleService
   ],
   declarations: [
       AppComponent,

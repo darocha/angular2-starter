@@ -3,8 +3,7 @@ import { VehicleService } from './vehicle.service';
 
 @Component({
     selector: 'my-vehicles',
-    templateUrl: 'vehicle.template.html',
-    providers: [VehicleService],
+    templateUrl: 'vehicle.template.html'
 })
 export class VehicleComponent {
     constructor (
