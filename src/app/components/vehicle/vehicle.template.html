@@ -24,9 +24,10 @@
                 (keypress)="log('keypress', $event)">
         </div>
     </div>
-    <div>
+    <button (click)="select()">Select</button>
+    <div *ngIf="isSelect">
         <div *ngFor="let vehicle of vehicles">
-            {{vehicle.name}}
+            {{vehicle.name | uppercase}}
         </div>
     </div>
 </div>

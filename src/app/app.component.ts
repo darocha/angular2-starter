@@ -11,8 +11,4 @@ export class AppComponent {
     ) {}
 
     appName = this.appService.getAppName();
-
-    test() {
-        console.log(this.appName);
-    }
 }

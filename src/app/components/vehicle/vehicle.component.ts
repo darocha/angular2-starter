@@ -12,6 +12,12 @@ export class VehicleComponent {
 
     vehicles = this.vehicleService.getVehicles();
 
+    isSelect = false;
+
+    select() {
+        this.isSelect = !this.isSelect;
+    }
+
     imagePath='assets/img/angular-logo.png';
     link='http://angular.io';
     story='The Empire Strikes Back';
