@@ -4,8 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { VehicleComponent } from './components/vehicle/vehicle.component';
+import { CharacterListComponent } from './components/character-list/character-list.component';
+import { CharacterComponent } from './components/character/character.component';
 
 import { VehicleService } from './components/vehicle/vehicle.service';
+import { CharacterService } from './components/character-list/character.service';
 import { AppService } from './app.service';
 
 @NgModule({
@@ -15,11 +18,14 @@ import { AppService } from './app.service';
   ],
   providers: [
       AppService,
-      VehicleService
+      VehicleService,
+      CharacterService
   ],
   declarations: [
       AppComponent,
-      VehicleComponent
+      VehicleComponent,
+      CharacterListComponent,
+      CharacterComponent
   ],
   bootstrap: [AppComponent],
 })
