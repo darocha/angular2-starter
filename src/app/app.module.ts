@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule  } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { VehicleComponent } from './components/vehicle/vehicle.component';
@@ -14,7 +15,8 @@ import { AppService } from './app.service';
 @NgModule({
   imports: [
       BrowserModule,
-      FormsModule
+      FormsModule,
+      HttpModule
   ],
   providers: [
       AppService,

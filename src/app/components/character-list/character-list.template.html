@@ -5,5 +5,8 @@
 </ul>
 
 <button (click)="clearSelection()">Clear Selection</button>
+<div>
+    {{errorMessage}}
+</div>
 
 <my-character *ngIf="selectedCharacter" [character]="selectedCharacter"></my-character>

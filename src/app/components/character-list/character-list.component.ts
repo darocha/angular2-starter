@@ -10,13 +10,14 @@ import { CharacterService } from './character.service';
 export class CharacterListComponent implements OnInit {
     selectedCharacter: Character;
     characters: Array<Character>;
+    errorMessage: string;
 
     constructor (
         private characterService: CharacterService
     ) {}
 
     ngOnInit() {
-        this.characters = this.characterService.getCharacters();
+        this.getCharacters();
     }
 
     clearSelection() {
@@ -25,5 +26,13 @@ export class CharacterListComponent implements OnInit {
 
     select(character: Character) {
         this.selectedCharacter = character;
+    }
+
+    private getCharacters() {
+        this.characterService.getCharacters()
+            .subscribe(
+                characters => this.characters = characters,
+                error => this.errorMessage = <any>error
+            );
     }
 }
