@@ -4,19 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { VehicleComponent } from './components/vehicle/vehicle.component';
-import { CharacterListComponent } from './components/character-list/character-list.component';
-import { CharacterComponent } from './components/character/character.component';
 
-import { VehicleService } from './components/vehicle/vehicle.service';
+import { VehicleService } from './components/vehicle-list/vehicle.service';
 import { CharacterService } from './components/character-list/character.service';
 import { AppService } from './app.service';
+
+import { AppRoutingModule, routableComponents } from './app-routing.module';
 
 @NgModule({
   imports: [
       BrowserModule,
       FormsModule,
-      HttpModule
+      HttpModule,
+      AppRoutingModule
   ],
   providers: [
       AppService,
@@ -25,9 +25,7 @@ import { AppService } from './app.service';
   ],
   declarations: [
       AppComponent,
-      VehicleComponent,
-      CharacterListComponent,
-      CharacterComponent
+      routableComponents
   ],
   bootstrap: [AppComponent],
 })

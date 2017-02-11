@@ -1,12 +1,9 @@
-<ul>
-    <li *ngFor="let character of characters" (click)="select(character)">
-        {{ character.name }}
-    </li>
-</ul>
+<article>
+    <h4>My Characters</h4>
 
-<button (click)="clearSelection()">Clear Selection</button>
-<div>
-    {{errorMessage}}
-</div>
-
-<my-character *ngIf="selectedCharacter" [character]="selectedCharacter"></my-character>
+    <ul class="characters">
+        <li *ngFor="let character of characters">
+            {{character.id}}. {{character.name}}
+        </li>
+    </ul>
+</article>

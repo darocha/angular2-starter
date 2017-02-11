@@ -1,2 +1,17 @@
-<my-vehicles></my-vehicles>
-<my-character-list></my-character-list>
+<div>
+    <header>
+        <h1>my app</h1>
+        <h3>Router Demo</h3>
+        <nav>
+            <ul>
+                <li><a [routerLink]="['/characters']" href="">characters</a></li>
+                <li><a [routerLink]="['/vehicles']" href="">Vehicles</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <router-outlet></router-outlet>
+        </section>
+    </main>
+</div>
