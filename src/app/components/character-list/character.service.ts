@@ -2,12 +2,7 @@ import { Injectable } from '@angular/core';
 import { Character } from '../character/character.model';
 import { Http, Response } from '@angular/http';
 
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/throw';
 import { Observable } from 'rxjs/Observable';
-
-import _ from 'lodash';
 
 @Injectable()
 export class CharacterService {
@@ -18,6 +13,11 @@ export class CharacterService {
         return this.http.get('assets/mock-data/characters.json')
             .map((response: Response) => <Character[]>response.json().data)
             .catch(this.handleError);
+    }
+
+    getCharacter(id: number) {
+        return this.getCharacters()
+            .map(characters => characters.find(character => character.id === id));
     }
 
     private handleError(error: Response) {

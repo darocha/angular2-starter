@@ -5,7 +5,10 @@ import { CharacterService } from './character.service';
 @Component({
     selector: 'my-character-list',
     templateUrl: 'character-list.template.html',
-    styles: ['li {cursor: pointer;}']
+    styles: [`
+        .characters {list-style-type: none;}
+        *.characters li {padding: 4px; cursor: pointer;}
+    `]
 })
 export class CharacterListComponent implements OnInit {
     selectedCharacter: Character;
