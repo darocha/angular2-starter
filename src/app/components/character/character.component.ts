@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class CharacterComponent implements OnInit {
     @Input() character: Character;
     private id: any;
+    private model: any;
 
     constructor(
         private characterService: CharacterService,
@@ -26,6 +27,7 @@ export class CharacterComponent implements OnInit {
               .do(id => this.id = +id)
               .subscribe(id => this.getCharacter());
         }
+        this.model = 1;
     }
 
     private getCharacter() {

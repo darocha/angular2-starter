@@ -3,6 +3,8 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule, routableComponents } from './app-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import './rxjs-extensions';
 
 import { AppComponent } from './app.component';
@@ -15,7 +17,8 @@ import { CharacterService } from './components/character-list/character.service'
       BrowserModule,
       FormsModule,
       HttpModule,
-      AppRoutingModule
+      AppRoutingModule,
+      NgbModule.forRoot()
   ],
   providers: [
       VehicleService,
