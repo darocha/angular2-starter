@@ -8,7 +8,6 @@ import { MomentModule } from 'angular2-moment';
 
 
 /* Feature Modules */
-//import './rxjs-extensions';
 import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app.component';

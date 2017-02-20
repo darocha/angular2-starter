@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { throwIfAlreadyLoaded } from '../module-import-guard';
 import { ModalComponent }   from './modal.component';
 import { ModalService } from './modal.service';
 
@@ -11,4 +12,7 @@ import { ModalService } from './modal.service';
     providers: [ModalService]
 })
 export class ModalModule {
+    constructor(@Optional() @SkipSelf() parentModule: ModalModule) {
+        throwIfAlreadyLoaded(parentModule, 'ModalModule');
+    }
 }

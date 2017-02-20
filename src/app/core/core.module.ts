@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+import { throwIfAlreadyLoaded } from './module-import-guard';
 import { ModalModule } from './modal/modal.module';
 import { SpinnerModule } from './spinner/spinner.module';
 import { NavComponent } from './nav/nav.component';
@@ -31,4 +32,8 @@ import './rxjs-extensions';
     declarations: [NavComponent],
     providers: []
 })
-export class CoreModule {}
+export class CoreModule {
+    constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
+        throwIfAlreadyLoaded(parentModule, 'CoreModule');
+    }
+}

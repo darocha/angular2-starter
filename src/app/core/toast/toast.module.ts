@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 
+import { throwIfAlreadyLoaded } from '../module-import-guard';
 import { ToastComponent } from './toast.component';
 import { ToastService } from './toast.service';
 
@@ -11,4 +12,8 @@ import { ToastService } from './toast.service';
     declarations: [ToastComponent],
     providers: [ToastService]
 })
-export class ToastModule {}
+export class ToastModule {
+    constructor(@Optional() @SkipSelf() parentModule: ToastModule) {
+        throwIfAlreadyLoaded(parentModule, 'ToastModule')
+    }
+}
