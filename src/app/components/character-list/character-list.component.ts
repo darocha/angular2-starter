@@ -11,6 +11,7 @@ import { CharacterService } from './character.service';
     `]
 })
 export class CharacterListComponent implements OnInit {
+    myDate: Date;
     selectedCharacter: Character;
     characters: Array<Character>;
     errorMessage: string;
@@ -20,6 +21,7 @@ export class CharacterListComponent implements OnInit {
     ) {}
 
     ngOnInit() {
+        this.myDate = new Date();
         this.getCharacters();
     }
 

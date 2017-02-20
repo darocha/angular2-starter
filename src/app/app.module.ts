@@ -4,8 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule, routableComponents } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MomentModule } from 'angular2-moment';
 
-import './rxjs-extensions';
+
+/* Feature Modules */
+//import './rxjs-extensions';
+import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app.component';
 
@@ -17,7 +21,9 @@ import { CharacterService } from './components/character-list/character.service'
       BrowserModule,
       FormsModule,
       HttpModule,
+      CoreModule,
       AppRoutingModule,
+      MomentModule,
       NgbModule.forRoot()
   ],
   providers: [
