@@ -9,6 +9,9 @@ import { SpinnerModule } from './spinner/spinner.module';
 import { NavComponent } from './nav/nav.component';
 import { ToastModule } from './toast/toast.module';
 
+import { EntityService } from './entity.service';
+import { ExceptionService } from './exception.service';
+import { MessageService } from './message.service';
 import './rxjs-extensions';
 
 @NgModule({
@@ -30,7 +33,11 @@ import './rxjs-extensions';
         [NavComponent]
     ],
     declarations: [NavComponent],
-    providers: []
+    providers: [
+        EntityService,
+        ExceptionService,
+        MessageService,
+    ]
 })
 export class CoreModule {
     constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
