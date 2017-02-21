@@ -31,7 +31,7 @@ export class ModalComponent implements OnInit {
         modalService.activate = this.activate.bind(this);
     }
 
-    activate(message = this.defaults.message, title=this.defaults.title) {
+    activate(message = this.defaults.message, title = this.defaults.title) {
         this.title = title;
         this.message = message;
         this.okText = this.defaults.okText;

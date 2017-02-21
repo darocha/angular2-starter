@@ -9,7 +9,7 @@ import { MomentModule } from 'angular2-moment';
 
 /* Feature Modules */
 import { CoreModule } from './core/core.module';
-
+import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 
 import { VehicleService } from './components/vehicle-list/vehicle.service';
@@ -20,6 +20,7 @@ import { CharacterService } from './components/character-list/character.service'
       BrowserModule,
       FormsModule,
       HttpModule,
+      LoginModule,
       CoreModule,
       AppRoutingModule,
       MomentModule,
