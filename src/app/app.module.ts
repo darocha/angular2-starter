@@ -6,6 +6,7 @@ import { AppRoutingModule, routableComponents } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MomentModule } from 'angular2-moment';
 
+import './core/rxjs-extensions';
 
 /* Feature Modules */
 import { CoreModule } from './core/core.module';

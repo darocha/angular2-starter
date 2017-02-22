@@ -8,11 +8,11 @@ import { ModalModule } from './modal/modal.module';
 import { SpinnerModule } from './spinner/spinner.module';
 import { NavComponent } from './nav/nav.component';
 import { ToastModule } from './toast/toast.module';
+import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 
 import { EntityService } from './entity.service';
 import { ExceptionService } from './exception.service';
 import { MessageService } from './message.service';
-import './rxjs-extensions';
 
 @NgModule({
     imports: [
@@ -21,7 +21,8 @@ import './rxjs-extensions';
         RouterModule,
         ModalModule,
         SpinnerModule,
-        ToastModule
+        ToastModule,
+        PageNotFoundModule
     ],
     exports: [
         CommonModule,
@@ -30,6 +31,7 @@ import './rxjs-extensions';
         ModalModule,
         SpinnerModule,
         ToastModule,
+        PageNotFoundModule,
         [NavComponent]
     ],
     declarations: [NavComponent],
