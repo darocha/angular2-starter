@@ -13,7 +13,6 @@ export class MessageService {
     private subject = new Subject<ResetMessage>();
 
     state = this.subject;
-
     constructor(private http: Http, private toastService: ToastService) {}
 
     resetDb() {

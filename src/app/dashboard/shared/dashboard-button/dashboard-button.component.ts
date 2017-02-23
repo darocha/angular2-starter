@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { Character } from '../../../models';
+import { Character } from '../../../characters/shared/character.model';
 
 @Component({
     selector: 'story-dashboard-button',
